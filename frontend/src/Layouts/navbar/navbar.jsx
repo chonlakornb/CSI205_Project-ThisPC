@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -10,7 +10,7 @@ function Navbar() {
       </div>
       <div className="flex-5 text-center">
         {/* Laptops + Dropdown */}
-        <div className="relative group inline-block">
+        <div className="relative group inline-block pb-2">
           <Link
             className="mx-2 text-gray-700 hover:text-black transition-colors"
             to="/"
@@ -19,11 +19,19 @@ function Navbar() {
           </Link>
 
           {/* Dropdown */}
-          <div className="absolute left-0 hidden group-hover:flex flex-col bg-white text-black min-w-[180px] shadow-lg mt-2 rounded-md z-10 opacity-0 group-hover:opacity-100 transition-all duration-200">
-            {/* ข้างใน dropdown คุณใส่เองได้ */}
-            <div className="px-4 py-2">Dropdown Item 1</div>
-            <div className="px-4 py-2">Dropdown Item 2</div>
-
+          <div className="absolute left-0 hidden group-hover:flex flex-col bg-white text-black min-w-[180px] shadow-lg mt-2 rounded-md z-10 opacity-0 group-hover:opacity-100 transition-all duration-500">
+            <Link
+              to="/laptops/gaming"
+              className="px-4 py-2 hover:bg-gray-100"
+            >
+              Gaming Laptops
+            </Link>
+            <Link
+              to="/laptops/work"
+              className="px-4 py-2 hover:bg-gray-100"
+            >
+              Laptops for Work
+            </Link>
           </div>
         </div>
         <Link className="mx-2" to="/about">
