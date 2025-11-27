@@ -1,3 +1,12 @@
 :root {
   color: black;
 }
+
+.custom-scrollbar-hide::-webkit-scrollbar {
+    display: none; /* สำหรับ Chrome, Safari, Opera */
+}
+
+.custom-scrollbar-hide {
+    -ms-overflow-style: none;  /* สำหรับ IE and Edge */
+    scrollbar-width: none;  /* สำหรับ Firefox */
+}
